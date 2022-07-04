@@ -47,7 +47,10 @@ const RestaurantList = (props) => {
                 <CardTitle>{res.attributes.description}</CardTitle>
               </CardBody>
               <div className="card-footer">
-                <Link href="/restaurants?id=1" as="/restaurants/1">
+                <Link
+                  href={`/restaurants?id=${res.id}`}
+                  as={`/restaurants/${res.id}`}
+                >
                   <a className="btn btn-primary">もっと見る</a>
                 </Link>
               </div>
